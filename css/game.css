@@ -1,5 +1,6 @@
 body{
     color: lightgreen;
+    overflow: hidden;
 }
 main{
     display: flex;
