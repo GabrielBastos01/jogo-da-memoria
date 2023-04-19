@@ -1,0 +1,125 @@
+body{
+    color: lightgreen;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 20px 50px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../images/background.jpg");
+    font-size: 1.2em;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 10px;
+    opacity: 0.9;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 1); 
+    border-radius: 10px;
+}
+.grid {
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0px auto;
+    position: relative;
+    top: 50%;
+   
+
+}
+.card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    transition: all 10ms ease;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 1); 
+    border-radius: 10px;
+}
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border-radius: 9px;
+    
+}
+.front{
+
+    transform: scaleX(-1);
+    animation-iteration-count: infinite;
+}
+.back{
+    background-image: url('../images/costas.jpg');
+    animation-iteration-count: infinite;
+    backface-visibility: hidden;
+}
+.reveal-cards{
+   
+    transform: rotateY(180deg);
+    transition: transform 0.5s ease-out;
+    transition: box-shadow 0.5s, transform 0.5s;
+    transform-style: preserve-3d;
+    }
+  .disable-card{
+    filter:saturate(0);
+  }
+.play{
+    background-image: url('../images/music.png');
+}
+.opcoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-top: 20px;
+    
+  }
+  
+  .botao {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 1);
+    border-radius: 15px;
+    
+  }
+  
+
+.reset {
+    background-image: url('../images/revert.png');  
+    
+}
+
+.botao:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 15px;
+    
+}
+.sound{
+    background-image: url('volume-high-solid');
+    
+}
+.paused{
+    background-image: url('../images/bloqueado.png');
+    
+}
