@@ -34,6 +34,7 @@ header{
     margin: 0px auto;
     position: relative;
     top: 50%;
+    
    
 
 }
@@ -123,3 +124,40 @@ header{
     background-image: url('../images/bloqueado.png');
     
 }
+
+@media (max-width: 600px) {
+
+ 
+    header {
+      font-size: 1em;
+      max-width: 100%;
+      background-size: cover; 
+      margin-bottom: 10px;
+    }
+
+  
+
+    .grid {
+      width: 100%;
+      grid-template-columns:repeat(4,1fr);
+      margin: 5px ;
+      gap: 5px;
+      height: calc(100vh - 240px);
+      overflow-y: auto;
+    }
+
+    .grid {
+      max-width: 100%;
+    }
+  
+    
+    .card {
+      aspect-ratio: 4/6
+    }
+ 
+    .opcoes .botao {
+      max-width: 60px;
+    }
+  
+  }
+  
